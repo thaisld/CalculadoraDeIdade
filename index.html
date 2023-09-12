@@ -1,0 +1,22 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcula Idade</title>
+    <script>
+        function calculaIdade(anoNascimento, anoAtual = new Date().getFullYear()) {
+            if (anoNascimento <= anoAtual) {
+                const idade = anoAtual - anoNascimento;
+                return `Você tem ${idade} anos de idade.`;
+            } else {
+                return "Erro: Ano de nascimento maior que o ano atual.";
+            }
+        }
+
+        console.log(calculaIdade(1984, 2023));
+        console.log(calculaIdade(2000, 2023));
+        console.log(calculaIdade(2005, 1990)); 
+    </script>
+</head>
+<body>
